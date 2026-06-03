@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 09:20:18 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 17:16:32 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/03 17:36:14 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	push_top(t_node **stack, int value)
 {
 	t_node	*node;
 
-	if (!*stack)
-		return ;
 	node = new_node(value);
+	if (!node)
+		return ;
 	node->next = *stack;
 	*stack = node;
 }

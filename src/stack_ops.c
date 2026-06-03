@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 17:15:44 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 17:17:24 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/03 17:33:00 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,26 @@ int	stack_size(t_node *stack)
 	}
 	return (node_size);
 }
+/*
+criar uma main.c para testar os nós
+
+#include "include/push_swap.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	t_stacks	s;
+
+	s.a = NULL;
+	s.b = NULL;
+	push_top(&s.a, 3);
+	push_top(&s.a, 1);
+	push_top(&s.a, 2);
+	printf("topo: %d\n", peek_top(s.a));
+	printf("tamanho: %d\n", stack_size(s.a));
+	printf("pop: %d\n", pop_top(&s.a));
+	printf("topo depois: %d\n", peek_top(s.a));
+	free_stack(&s.a);
+	return (0);
+}
+*/
