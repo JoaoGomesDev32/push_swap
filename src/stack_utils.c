@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 09:32:36 by joaog            ###   ########.fr       */
+/*   Created: 2026/06/03 09:20:18 by joaog             #+#    #+#             */
+/*   Updated: 2026/06/03 09:31:33 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#include "../include/push_swap.h"
 
-/* Um nó da linked list */
-typedef struct s_node
+t_node	*new_node(int value)
 {
-	int				value;
-	struct s_node	*next;
-}	t_node;
+	t_node	*node;
 
-/* As duas stacks juntas */
-typedef struct s_stacks
-{
-	t_node	*a;
-	t_node	*b;
-	int		size_a;
-	int		size_b;
-}	t_stacks;
+	node = malloc(sizeof(t_node));
+	if (!node)
+		return (NULL);
+	node->value = value;
+	node->next = NULL;
+	return (node);
+}
