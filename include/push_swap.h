@@ -6,9 +6,12 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 09:32:36 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/03 17:23:14 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PUSHSWAP_H
+# define PUSHSWAP_H
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -28,3 +31,12 @@ typedef struct s_stacks
 	int		size_a;
 	int		size_b;
 }	t_stacks;
+
+t_node	*new_node(int value);
+void	push_top(t_node **stack, int value);
+int		pop_top(t_node **stack);
+void	free_stack(t_node **stack);
+int		peek_top(t_node *stack);
+int		stack_size(t_node *stack);
+
+#endif
