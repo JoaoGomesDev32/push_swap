@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 09:20:18 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 17:03:55 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/03 17:12:36 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,10 @@ int	stack_size(t_node *stack)
 		stack = stack->next;
 	}
 	return (node_size);
+}
+
+void	free_stack(t_node **stack)
+{
+	while (*stack)
+		pop_top(stack);
 }
