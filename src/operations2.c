@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:04:04 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 13:55:50 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/04 14:04:47 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,29 @@ static void	rotate(t_node **stack)
 	*stack = top->next;
 	last->next = top;
 	top->next = NULL;
+}
+
+void	op_ra(t_stacks *s)
+{
+	if (!s || !s->a)
+		return ;
+	rotate(&s->a);
+	write(1, "ra\n", 3);
+}
+
+void	op_rb(t_stacks *s)
+{
+	if (!s || !s->b)
+		return ;
+	rotate(&s->b);
+	write(1, "rb\n", 3);
+}
+
+void	op_rr(t_stacks *s)
+{
+	if (!s || !s->a || !s->b)
+		return ;
+	rotate(&s->a);
+	rotate(&s->b);
+	write(1, "rr\n", 3);
 }
