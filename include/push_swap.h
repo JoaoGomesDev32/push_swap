@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 14:03:55 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/04 14:28:34 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,8 @@ void	op_pb(t_stacks *s);
 void	op_ra(t_stacks *s);
 void	op_rb(t_stacks *s);
 void	op_rr(t_stacks *s);
+void	op_rra(t_stacks *s);
+void	op_rrb(t_stacks *s);
+void	op_rrr(t_stacks *s);
 
 #endif
