@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 11:35:05 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 12:24:12 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/04 13:56:13 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,12 @@ void	op_ss(t_stacks *s)
 	swap(&s->a);
 	swap(&s->b);
 	write(1, "ss\n", 3);
+}
+
+void	op_pa(t_stacks *s)
+{
+	if (!s || !s->b)
+		return ;
+	push_top(&s->a, pop_top(&s->b));
+	write(1, "pa\n", 3);
 }
