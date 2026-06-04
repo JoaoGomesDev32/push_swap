@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:06:25 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 14:27:46 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/04 14:29:21 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,22 @@ void	op_rrr(t_stacks *s)
 	rev_rotate(&s->b);
 	write(1, "rrr\n", 4);
 }
+
+/*
+#include "include/push_swap.h"
+
+int	main(void)
+{
+    t_stacks	s;
+
+    s.a = NULL;
+    s.b = NULL;
+    push_top(&s.a, 3);
+    push_top(&s.a, 1);
+    push_top(&s.a, 2);
+    op_sa(&s);
+    op_ra(&s);
+    free_stack(&s.a);
+    return (0);
+}
+*/
