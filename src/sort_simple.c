@@ -6,7 +6,7 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:50:01 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/05 14:02:20 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/05 14:55:38 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,16 @@ int	find_min_pos(t_node *stack)
 		stack = stack->next;
 	}
 	return (min_pos);
+}
+
+void	bring_min_to_top(t_stacks *s)
+{
+	int	min_pos;
+
+	min_pos = find_min_pos(s->a);
+	while (min_pos > 0)
+	{
+		op_ra(s);
+		min_pos--;
+	}
 }
