@@ -1,7 +1,7 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iinclude -Ilibft
+CFLAGS = -Wall -Wextra -Werror -I include -I libft
 
 LIBFT = libft/libft.a
 
@@ -12,7 +12,8 @@ SRC = src/main.c \
       src/stack_ops.c \
       src/stack_utils.c \
       src/parsing.c \
-	  src/validation.c \
+	src/validation.c \
+      src/sort_simple.c
 
 OBJ = $(SRC:.c=.o)
 
