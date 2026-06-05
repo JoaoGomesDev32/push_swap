@@ -6,7 +6,7 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/05 14:34:30 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/05 16:23:47 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		stack_size(t_node *stack);
 t_node	*parse_args(int argc, char **argv);
 int		is_sorted(t_node *stack);
 int		has_duplicates(t_node *stack);
-int		find_min_pos(t_node *stack);
+void	sort_simple(t_stacks *s);
 
 void	op_sa(t_stacks *s);
 void	op_sb(t_stacks *s);
