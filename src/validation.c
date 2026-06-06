@@ -6,7 +6,7 @@
 /*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:57:11 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/05 14:18:36 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/06 13:44:46 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,26 @@ int	has_duplicates(t_node *stack)
 		current = current->next;
 	}
 	return (0);
+}
+
+int	is_valid_number(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str || !str[0])
+		return (0);
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	if (!str[i])
+		return (0);
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
 /*#include "push_swap.h"

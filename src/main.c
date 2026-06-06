@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/05 10:59:25 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/06 13:48:08 by fminks-g         ###   ########.fr       */
+/*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
+/*   Updated: 2026/06/06 13:48:47 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
-#include "push_swap.h"
-
-t_node	*parse_args(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_node	*stack;
-	int		i;
 
-	stack = NULL;
-	i = 1;
-	while (i < argc)
+	stack = parse_args(argc, argv);
+	if (!stack)
 	{
-		if (!is_valid_number(argv[i]))
-			return (NULL);
-		push_bottom(&stack, ft_atoi(argv[i]));
-		i++;
+		printf("Error\n");
+		return (1);
 	}
-	return (stack);
+	printf("Parsing OK\n");
+	free_stack(&stack);
+	return (0);
 }

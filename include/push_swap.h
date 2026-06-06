@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/05 16:23:47 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/06 13:45:19 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		stack_size(t_node *stack);
 t_node	*parse_args(int argc, char **argv);
 int		is_sorted(t_node *stack);
 int		has_duplicates(t_node *stack);
-void	sort_simple(t_stacks *s);
+int		is_valid_number(char *str);
 
 void	op_sa(t_stacks *s);
 void	op_sb(t_stacks *s);
@@ -56,5 +56,6 @@ void	op_rra(t_stacks *s);
 void	op_rrb(t_stacks *s);
 void	op_rrr(t_stacks *s);
 void	push_bottom(t_node **stack, int value);
+void	sort_simple(t_stacks *s);
 
 #endif
