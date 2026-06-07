@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 10:59:25 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/06 13:48:08 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/07 12:24:15 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 t_node	*parse_args(int argc, char **argv)
 {
