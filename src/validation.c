@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:57:11 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/06 13:44:46 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/07 12:24:28 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	is_sorted(t_node *stack)
 {
