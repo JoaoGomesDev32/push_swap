@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/06 13:45:19 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/08 15:26:27 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ t_node	*parse_args(int argc, char **argv);
 int		is_sorted(t_node *stack);
 int		has_duplicates(t_node *stack);
 int		is_valid_number(char *str);
+float	compute_disorder(t_node *stack);
 
 void	op_sa(t_stacks *s);
 void	op_sb(t_stacks *s);
