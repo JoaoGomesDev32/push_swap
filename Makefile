@@ -12,8 +12,9 @@ SRC = main.c \
       src/stack_ops.c \
       src/stack_utils.c \
       src/parsing.c \
-	  src/validation.c \
-      src/sort_simple.c
+      src/validation.c \
+      src/sort_simple.c \
+      src/disorder.c
 
 OBJ = $(SRC:.c=.o)
 
