@@ -6,11 +6,11 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 17:15:44 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/09 14:28:52 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:20:34 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	peek_top(t_node *stack)
 {

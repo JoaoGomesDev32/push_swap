@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   operations2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:04:04 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 14:04:47 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/09 14:05:17 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	op_pb(t_stacks *s)
 {
 	if (!s || !s->a)
 		return ;
-	push_top(&s->b, pop_top(&s->a));
+	push_node(&s->b, &s->a);
 	write(1, "pb\n", 3);
 }
 
@@ -42,14 +42,6 @@ void	op_ra(t_stacks *s)
 		return ;
 	rotate(&s->a);
 	write(1, "ra\n", 3);
-}
-
-void	op_rb(t_stacks *s)
-{
-	if (!s || !s->b)
-		return ;
-	rotate(&s->b);
-	write(1, "rb\n", 3);
 }
 
 void	op_rr(t_stacks *s)

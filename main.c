@@ -6,11 +6,11 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 14:57:36 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:20:09 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "push_swap.h"
 
 int	main(int argc, char **argv)
 {
@@ -18,8 +18,8 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	s.b = NULL;
 	s.a = parse_args(argc, argv);
+	s.b = NULL;
 	if (!s.a)
 	{
 		write(2, "Error\n", 6);
@@ -37,7 +37,9 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	// sort_simple(&s);
-	sort_medium(&s);
-	free_stack(&s.a);
+	// sort_medium(&s);
+	assign_indexes(s.a);
+	radix_sort(&s);
+	free_stack(&s.b);
 	return (0);
 }

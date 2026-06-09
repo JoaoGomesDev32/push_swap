@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 11:35:05 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 13:56:13 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/09 14:07:24 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 static void	swap(t_node **stack)
 {
-	int	first;
-	int	second;
+	t_node	*first;
+	t_node	*second;
 
-	if (!*stack || !(*stack)->next)
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	first = pop_top(stack);
-	second = pop_top(stack);
-	push_top(stack, first);
-	push_top(stack, second);
+	first = *stack;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*stack = second;
 }
 
 void	op_sa(t_stacks *s)
@@ -54,6 +55,6 @@ void	op_pa(t_stacks *s)
 {
 	if (!s || !s->b)
 		return ;
-	push_top(&s->a, pop_top(&s->b));
+	push_node(&s->a, &s->b);
 	write(1, "pa\n", 3);
 }
