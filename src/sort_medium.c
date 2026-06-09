@@ -6,13 +6,13 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:38:35 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/09 12:50:05 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 13:00:41 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	normilize(t_node *stack, int size)
+static void calc_ranks(t_node *stack, int *ranks)
 {
 	t_node	*current;
 	t_node	*runner;
@@ -20,10 +20,6 @@ void	normilize(t_node *stack, int size)
 	int		i;
 	int		rank;
 
-	size = stack_size(stack);
-	ranks = malloc(sizeof(int) * size);
-	if (!ranks)
-		return ;
 	i = 0;
 	current = stack;
 	while (current)
@@ -39,12 +35,30 @@ void	normilize(t_node *stack, int size)
 		ranks[i++] = rank;
 		current = current->next;
 	}
+}
+
+static void	apply_ranks(t_node *stack, int *ranks)
+{
+	int	i;
+
 	i = 0;
-	current = stack;
-	while (current)
+	while (stack)
 	{
-		current->value = ranks[i++];
-		current = current->next;
+		stack->value = ranks[i++];
+		stack = stack->next;
 	}
+}
+
+void	normilize(t_node *stack)
+{
+	int	*ranks;
+	int	size;
+
+	size = stack_size(stack);
+	ranks = malloc(sizeof(int) * size);
+	if (!ranks)
+		return ;
+	calc_ranks(stack, ranks);
+	apply_ranks(stack, ranks);
 	free(ranks);
 }
