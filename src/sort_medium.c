@@ -6,18 +6,16 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:38:35 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/09 15:00:37 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:07:01 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <math.h>
 
 static void calc_ranks(t_node *stack, int *ranks)
 {
 	t_node	*current;
 	t_node	*runner;
-	int		*ranks;
 	int		i;
 	int		rank;
 
@@ -89,7 +87,7 @@ void	sort_medium(t_stacks *s)
 
 	n = stack_size(s->a);
 	s->size_a = n;
-	s->size_a = 0;
+	s->size_b = 0;
 	normalize(s->a);
 	chunk_size = n / ft_sqrt(n);
 	i = 0;
@@ -99,5 +97,5 @@ void	sort_medium(t_stacks *s)
 		i += chunk_size;
 	}
 	while (s->b)
-		op_pb(s);
+		op_pa(s);
 }
