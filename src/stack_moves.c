@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stack_moves.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/09 13:08:53 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 13:45:40 by fminks-g         ###   ########.fr       */
+/*   Created: 2026/06/09 13:03:31 by fminks-g          #+#    #+#             */
+/*   Updated: 2026/06/09 13:49:46 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	push_node(t_node **dest, t_node **src)
 {
-	t_stacks	s;
+	t_node	*tmp;
 
-	if (argc < 2)
-		return (0);
-	s.a = parse_args(argc, argv);
-	s.b = NULL;
-	if (!s.a)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
-	if (has_duplicates(s.a))
-	{
-		free_stack(&s.a);
-		write(2, "Error\n", 6);
-		return (1);
-	}
-	if (is_sorted(s.a))
-	{
-		free_stack(&s.a);
-		return (0);
-	}
-	assign_indexes(s.a);
-	radix_sort(&s);
-	free_stack(&s.a);
-	free_stack(&s.b);
-	return (0);
+	if (!src || !*src)
+		return ;
+	tmp = *src;
+	*src = (*src)->next;
+	tmp->next = *dest;
+	*dest = tmp;
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+         #
+#    By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/28 10:27:39 by joagomes          #+#    #+#              #
-#    Updated: 2026/04/30 14:24:00 by joagomes         ###   ########.fr        #
+#    Updated: 2026/06/09 09:23:26 by fminks-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ SRCS = ft_strlen.c \
 	ft_lstdelone.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
-	ft_lstmap.c
+	ft_lstmap.c \
 
 OBJ = $(SRCS:.c=.o)
 

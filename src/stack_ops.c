@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_ops.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 17:15:44 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 17:33:00 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/09 11:26:51 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	peek_top(t_node *stack)
 {
