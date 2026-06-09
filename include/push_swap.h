@@ -6,8 +6,10 @@
 /*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/09 13:56:12 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/09 14:50:34 by fminks-g         ###   ########.fr       */
 /*                                                                            */
+/* ************************************************************************** */
+
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
@@ -51,6 +53,7 @@ int		has_duplicates(t_node *stack);
 int		is_valid_number(char *str);
 long	ft_atol(const char *str);
 int		is_int_range(char *str);
+float	compute_disorder(t_node *stack);
 
 /* Operations */
 void	op_sa(t_stacks *s);

@@ -16,7 +16,8 @@ SRC = main.c \
       src/validation.c \
       src/sort_simple.c \
       src/index.c \
-      src/sort_complex.c
+      src/sort_complex.c \
+      src/disorder.c
 
 OBJ = $(SRC:.c=.o)
 
