@@ -6,7 +6,7 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/08 15:26:27 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 14:59:49 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int		is_sorted(t_node *stack);
 int		has_duplicates(t_node *stack);
 int		is_valid_number(char *str);
 float	compute_disorder(t_node *stack);
+int		ft_sqrt(int n);
 
 void	op_sa(t_stacks *s);
 void	op_sb(t_stacks *s);
@@ -57,6 +58,8 @@ void	op_rra(t_stacks *s);
 void	op_rrb(t_stacks *s);
 void	op_rrr(t_stacks *s);
 void	push_bottom(t_node **stack, int value);
+void	normalize(t_node *stack);
 void	sort_simple(t_stacks *s);
+void	sort_medium(t_stacks *s);
 
 #endif

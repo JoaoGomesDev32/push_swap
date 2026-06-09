@@ -6,7 +6,7 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:38:35 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/09 14:25:47 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:00:37 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	apply_ranks(t_node *stack, int *ranks)
 	}
 }
 
-void	normilize(t_node *stack)
+void	normalize(t_node *stack)
 {
 	int	*ranks;
 	int	size;
@@ -90,7 +90,7 @@ void	sort_medium(t_stacks *s)
 	n = stack_size(s->a);
 	s->size_a = n;
 	s->size_a = 0;
-	normilize(s->a);
+	normalize(s->a);
 	chunk_size = n / ft_sqrt(n);
 	i = 0;
 	while (i < n)
