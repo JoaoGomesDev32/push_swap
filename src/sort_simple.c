@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:50:01 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/05 16:22:29 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 11:26:44 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 static int	find_min_pos(t_node *stack)
 {
