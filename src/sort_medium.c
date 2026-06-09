@@ -6,13 +6,13 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:38:35 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/09 15:07:01 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:31:31 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void calc_ranks(t_node *stack, int *ranks)
+static void	calc_ranks(t_node *stack, int *ranks)
 {
 	t_node	*current;
 	t_node	*runner;
@@ -71,7 +71,7 @@ static void	chunk_to_b(t_stacks *s, int min, int max)
 	i = 0;
 	while (i < size)
 	{
-		if(peek_top(s->a) >= min && peek_top(s->a) <= max)
+		if (peek_top(s->a) >= min && peek_top(s->a) <= max)
 			op_pb(s);
 		else
 			op_ra(s);
