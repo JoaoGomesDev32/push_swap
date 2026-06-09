@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_ops.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 17:15:44 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/09 11:26:51 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:20:34 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,17 @@ int	stack_size(t_node *stack)
 	}
 	return (node_size);
 }
+
+int	ft_sqrt(int n)
+{
+	int	i;
+
+	i = 1;
+	while (i * 1 <= n)
+		i++;
+	return (i - 1);
+}
+
 /*
 criar uma main.c para testar os nós
 

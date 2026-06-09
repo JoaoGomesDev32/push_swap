@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/09 13:08:53 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 13:45:40 by fminks-g         ###   ########.fr       */
+/*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
+/*   Updated: 2026/06/09 15:20:09 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,10 @@ int	main(int argc, char **argv)
 		free_stack(&s.a);
 		return (0);
 	}
+	// sort_simple(&s);
+	// sort_medium(&s);
 	assign_indexes(s.a);
 	radix_sort(&s);
-	free_stack(&s.a);
 	free_stack(&s.b);
 	return (0);
 }

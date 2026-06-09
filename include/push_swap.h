@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/09 14:50:34 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/09 15:17:28 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int		is_valid_number(char *str);
 long	ft_atol(const char *str);
 int		is_int_range(char *str);
 float	compute_disorder(t_node *stack);
+int		ft_sqrt(int n);
 
 /* Operations */
 void	op_sa(t_stacks *s);
@@ -67,10 +68,7 @@ void	op_rr(t_stacks *s);
 void	op_rra(t_stacks *s);
 void	op_rrb(t_stacks *s);
 void	op_rrr(t_stacks *s);
-
-/* Sorting */
+void	push_bottom(t_node **stack, int value);
 void	sort_simple(t_stacks *s);
-void	assign_indexes(t_node *stack);
-void	radix_sort(t_stacks *s);
 
 #endif
