@@ -6,7 +6,7 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:38:35 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/09 13:00:41 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/09 13:44:36 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,21 @@ void	normilize(t_node *stack)
 	calc_ranks(stack, ranks);
 	apply_ranks(stack, ranks);
 	free(ranks);
+}
+
+static void	chunk_to_b(t_stacks *s, int min, int max)
+{
+	int	size;
+	int	i;
+
+	size = s->size_a;
+	i = 0;
+	while (i < size)
+	{
+		if(peek_top(s->a) >= min && peek_top(s->a) <= max)
+			op_pb(s);
+		else
+			op_ra(s);
+		i++;
+	}
 }
