@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_complex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 12:45:23 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 12:06:26 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/10 11:45:33 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ void	radix_sort(t_stacks *s)
 	int	i;
 	int	j;
 
-	size = stack_size(s->a);
+	s->size_a = stack_size(s->a);
+	s->size_b = 0;
+	size = s->size_a;
 	max_bits = get_max_bits(s->a);
 	i = 0;
 	while (i < max_bits)

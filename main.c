@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 15:33:20 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/10 11:50:36 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ int	main(int argc, char **argv)
 	s.a = parse_args(argc, argv);
 	s.b = NULL;
 	if (!s.a)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
+		return (write(2, "Error\n", 6), (1));
 	if (has_duplicates(s.a))
 	{
 		free_stack(&s.a);
@@ -32,9 +29,12 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	if (is_sorted(s.a))
-		return (free_stack(&s.a), (0));
+		return (free_stack(&s.a), 0);
+	s.size_a = stack_size(s.a);
+	s.size_b = 0;
 	assign_indexes(s.a);
 	radix_sort(&s);
+	free_stack(&s.a);
 	free_stack(&s.b);
 	return (0);
 }
