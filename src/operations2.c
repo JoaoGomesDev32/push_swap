@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:04:04 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/09 14:05:17 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/10 12:15:38 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,14 @@ void	op_ra(t_stacks *s)
 		return ;
 	rotate(&s->a);
 	write(1, "ra\n", 3);
+}
+
+void	op_rb(t_stacks *s)
+{
+	if (!s || !s->b)
+		return ;
+	rotate(&s->b);
+	write(1, "rb\n", 3);
 }
 
 void	op_rr(t_stacks *s)

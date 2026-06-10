@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/10 12:09:15 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/10 12:30:57 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int		is_sorted(t_node *stack);
 int		has_duplicates(t_node *stack);
 int		is_valid_number(char *str);
 float	compute_disorder(t_node *stack);
+int		is_int_range(char *str);
 
 /* Operations */
 void	op_sa(t_stacks *s);

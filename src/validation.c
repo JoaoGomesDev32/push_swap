@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:57:11 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 11:27:40 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/10 12:30:14 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,16 @@ int	is_valid_number(char *str)
 			return (0);
 		i++;
 	}
+	return (1);
+}
+
+int	is_int_range(char *str)
+{
+	long	n;
+
+	n = ft_atol(str);
+	if (n > 2147483647 || n < -2147483648)
+		return (0);
 	return (1);
 }
 
