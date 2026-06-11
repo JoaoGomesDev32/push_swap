@@ -39,7 +39,7 @@ int	ft_sqrt(int n)
 	int	i;
 
 	i = 1;
-	while (i * 1 <= n)
+	while (i * i <= n)
 		i++;
 	return (i - 1);
 }
