@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/10 12:30:57 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/11 19:36:15 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,12 @@ void	sort_simple(t_stacks *s);
 void	radix_sort(t_stacks *s);
 void	normalize(t_node *stack);
 void	sort_medium(t_stacks *s);
+void	sort_adaptive(t_stacks *s);
+int		find_max_pos(t_node *stack);
+void	bring_max_to_top(t_stacks *s);
+
+int		error_exit(t_stacks *s);
+void	run_strategy(t_stacks *s, int strategy);
+int		get_strategy(char *arg);
 
 #endif

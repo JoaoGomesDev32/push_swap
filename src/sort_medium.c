@@ -6,7 +6,7 @@
 /*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:38:35 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/09 15:31:31 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/11 18:11:43 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static void	chunk_to_b(t_stacks *s, int min, int max)
 	int	size;
 	int	i;
 
-	size = s->size_a;
+	size = stack_size(s->a);
 	i = 0;
 	while (i < size)
 	{
@@ -89,7 +89,7 @@ void	sort_medium(t_stacks *s)
 	s->size_a = n;
 	s->size_b = 0;
 	normalize(s->a);
-	chunk_size = n / ft_sqrt(n);
+	chunk_size = ft_sqrt(n);
 	i = 0;
 	while (i < n)
 	{
@@ -97,5 +97,8 @@ void	sort_medium(t_stacks *s)
 		i += chunk_size;
 	}
 	while (s->b)
+	{
+		bring_max_to_top(s);
 		op_pa(s);
+	}
 }
