@@ -6,7 +6,7 @@
 /*   By: fminks-g <fminks-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 12:49:53 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/09 13:06:44 by fminks-g         ###   ########.fr       */
+/*   Updated: 2026/06/11 16:50:44 by fminks-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,23 @@ static t_node	*find_min_unindexed(t_node *stack)
 	return (min);
 }
 
-void	assign_indexes(t_node *stack)
-{
-	t_node	*min;
-	int		index;
-	int		size;
-
-	init_index(stack);
-	index = 0;
-	size = stack_size(stack);
-	while (index < size)
+	void	assign_indexes(t_node *stack)
 	{
-		min = find_min_unindexed(stack);
-		if (min)
-			min->index = index;
-		index++;
+		t_node	*min;
+		int		index;
+		int		size;
+
+		init_index(stack);
+		index = 0;
+		size = stack_size(stack);
+		while (index < size)
+		{
+			min = find_min_unindexed(stack);
+			if (min)
+				min->index = index;
+			index++;
+		}
 	}
-}
 
 /*#include "push_swap.h"
 #include <stdio.h>
