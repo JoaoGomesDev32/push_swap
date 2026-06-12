@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/11 19:34:12 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/12 15:30:56 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,26 @@ int	main(int argc, char **argv)
 {
 	t_stacks	s;
 	int			strategy;
-	int			has_flag;
+	int			start;
+	float		disorder;
 
 	if (argc < 2)
 		return (0);
-	has_flag = (ft_strncmp(argv[1], "--", 2) == 0);
-	strategy = get_strategy(argv[1]);
-	if (has_flag && strategy == -1)
+	ft_bzero(&s, sizeof(t_stacks));
+	start = parse_flags(argc, argv, &s, &strategy);
+	if (start == -1)
 		return (write(2, "Error\n", 6), 1);
-	if (has_flag && argc < 3)
+	if (start >= argc)
 		return (0);
-	s.a = parse_args(argc - has_flag, argv + has_flag);
-	s.b = NULL;
+	s.a = parse_args(argc - start + 1, argv + start - 1);
 	if (validate(&s))
 		return (1);
 	if (is_sorted(s.a))
 		return (free_stack(&s.a), 0);
 	s.size_a = stack_size(s.a);
-	s.size_b = 0;
+	disorder = compute_disorder(s.a);
 	run_strategy(&s, strategy);
-	free_stack(&s.a);
-	free_stack(&s.b);
-	return (0);
+	if (s.bench)
+		print_bench(&s, disorder);
+	return (free_stack(&s.a), free_stack(&s.b), 0);
 }

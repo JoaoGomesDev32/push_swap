@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/11 19:36:15 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/12 18:20:44 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ typedef struct s_stacks
 	t_node	*b;
 	int		size_a;
 	int		size_b;
+	int		ops[11];
+	int		bench;
+	int		used_strategy;
 }	t_stacks;
 
 /* Stack utils */
@@ -81,5 +84,10 @@ void	bring_max_to_top(t_stacks *s);
 int		error_exit(t_stacks *s);
 void	run_strategy(t_stacks *s, int strategy);
 int		get_strategy(char *arg);
+int		parse_flags(int argc, char **argv, t_stacks *s, int *strategy);
+void	print_op(char *name, int value);
+void	print_ops_line1(t_stacks *s);
+void	print_ops_line2(t_stacks *s);
+void	print_bench(t_stacks *s, float disorder);
 
 #endif
