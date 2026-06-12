@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/12 14:54:31 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 15:09:50 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_stacks
 	int		size_b;
 	int		ops[11];
 	int		bench;
+	int		used_strategy;
 }	t_stacks;
 
 /* Stack utils */

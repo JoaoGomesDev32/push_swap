@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 19:34:34 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/12 14:53:54 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 15:13:29 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	error_exit(t_stacks *s)
 
 void	run_strategy(t_stacks *s, int strategy)
 {
+	s->used_strategy = strategy;
 	if (strategy == 1)
 		sort_simple(s);
 	else if (strategy == 2)
