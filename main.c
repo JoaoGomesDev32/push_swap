@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/12 14:56:23 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 15:06:53 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 	t_stacks	s;
 	int			strategy;
 	int			start;
+	float		disorder;
 
 	if (argc < 2)
 		return (0);
@@ -44,6 +45,7 @@ int	main(int argc, char **argv)
 	if (is_sorted(s.a))
 		return (free_stack(&s.a), 0);
 	s.size_a = stack_size(s.a);
+	disorder = compute_disorder(s.a);
 	run_strategy(&s, strategy);
 	free_stack(&s.a);
 	free_stack(&s.b);
