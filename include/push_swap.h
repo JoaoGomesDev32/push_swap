@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 22:05:39 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/12 14:26:53 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 14:54:31 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ void	bring_max_to_top(t_stacks *s);
 int		error_exit(t_stacks *s);
 void	run_strategy(t_stacks *s, int strategy);
 int		get_strategy(char *arg);
+int		parse_flags(int argc, char **argv, t_stacks *s, int *strategy);
 
 #endif

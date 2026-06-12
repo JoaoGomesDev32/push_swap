@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_strategy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 19:34:34 by joagomes          #+#    #+#             */
-/*   Updated: 2026/06/11 19:35:11 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/12 14:53:54 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,25 @@ int	get_strategy(char *arg)
 	if (ft_strncmp(arg, "--adaptive", 11) == 0)
 		return (4);
 	return (-1);
+}
+
+int	parse_flags(int argc, char **argv, t_stacks *s, int *strategy)
+{
+	int	i;
+
+	i = 1;
+	*strategy = 0;
+	while (i < argc && ft_strncmp(argv[i], "--", 2) == 0)
+	{
+		if (ft_strncmp(argv[i], "--bench", 8) == 0)
+			s->bench = 1;
+		else
+		{
+			*strategy = get_strategy(argv[i]);
+			if (*strategy == -1)
+				return (-1);
+		}
+		i++;
+	}
+	return (i);
 }
