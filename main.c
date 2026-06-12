@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/11 19:34:12 by joagomes         ###   ########.fr       */
+/*   Updated: 2026/06/12 14:44:48 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
+	ft_bzero(s.ops, sizeof(s.ops));
 	has_flag = (ft_strncmp(argv[1], "--", 2) == 0);
 	strategy = get_strategy(argv[1]);
 	if (has_flag && strategy == -1)
