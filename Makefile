@@ -21,7 +21,8 @@ SRC = main.c \
       src/sort_complex.c \
       src/sort_adaptive.c \
       src/get_strategy.c \
-	  src/bench.c
+	  src/bench.c \
+	  src/bench_ops.c
 
 OBJ = $(SRC:.c=.o)
 

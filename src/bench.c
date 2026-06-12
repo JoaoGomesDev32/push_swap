@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 15:22:34 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/12 18:08:33 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 18:24:05 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,21 @@ static void	print_strategy(int used_strategy)
 		ft_putstr_fd("Complex / O(n*log(n))\n", 2);
 }
 
+static int	total_ops(t_stacks *s)
+{
+	int	total;
+	int	i;
+
+	total = 0;
+	i = 0;
+	while (i < 11)
+	{
+		total += s->ops[i];
+		i++;
+	}
+	return (total);
+}
+
 void	print_bench(t_stacks *s, float disorder)
 {
 	ft_putstr_fd("[bench] disorder: ", 2);
@@ -46,4 +61,9 @@ void	print_bench(t_stacks *s, float disorder)
 	ft_putstr_fd("%\n", 2);
 	ft_putstr_fd("[bench] strategy: ", 2);
 	print_strategy(s->used_strategy);
+	ft_putstr_fd("[bench] total_ops: ", 2);
+	ft_putnbr_fd(total_ops(s), 2);
+	ft_putstr_fd("\n", 2);
+	print_ops_line1(s);
+	print_ops_line2(s);
 }
