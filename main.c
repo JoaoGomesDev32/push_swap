@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:48:32 by fminks-g          #+#    #+#             */
-/*   Updated: 2026/06/12 15:06:53 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 15:30:56 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int argc, char **argv)
 	s.size_a = stack_size(s.a);
 	disorder = compute_disorder(s.a);
 	run_strategy(&s, strategy);
-	free_stack(&s.a);
-	free_stack(&s.b);
-	return (0);
+	if (s.bench)
+		print_bench(&s, disorder);
+	return (free_stack(&s.a), free_stack(&s.b), 0);
 }
