@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 15:22:34 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/12 15:26:38 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 18:08:33 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,21 @@ static void	print_percent(float value)
 	ft_putnbr_fd(decimal, 2);
 }
 
+static void	print_strategy(int used_strategy)
+{
+	if (used_strategy == 1)
+		ft_putstr_fd("Simple / O(n^2)\n", 2);
+	else if (used_strategy == 2)
+		ft_putstr_fd("Medium / O(n*sqrt(n))\n", 2);
+	else
+		ft_putstr_fd("Complex / O(n*log(n))\n", 2);
+}
+
 void	print_bench(t_stacks *s, float disorder)
 {
-	(void)s;
 	ft_putstr_fd("[bench] disorder: ", 2);
 	print_percent(disorder);
 	ft_putstr_fd("%\n", 2);
+	ft_putstr_fd("[bench] strategy: ", 2);
+	print_strategy(s->used_strategy);
 }
