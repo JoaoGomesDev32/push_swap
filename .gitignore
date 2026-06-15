@@ -18,4 +18,6 @@ a.out
 .vscode/
 
 # MacOS
-.DS_Store
+.DS_Storechecker_linux
+checker_Mac
+fedora_checker
