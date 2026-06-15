@@ -6,7 +6,7 @@
 /*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 14:06:25 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/04 14:29:21 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/12 14:39:14 by joaog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	op_rra(t_stacks *s)
 	if (!s || !s->a)
 		return ;
 	rev_rotate(&s->a);
+	s->ops[8]++;
 	write(1, "rra\n", 4);
 }
 
@@ -44,6 +45,7 @@ void	op_rrb(t_stacks *s)
 	if (!s || !s->b)
 		return ;
 	rev_rotate(&s->b);
+	s->ops[9]++;
 	write(1, "rrb\n", 4);
 }
 
@@ -53,6 +55,7 @@ void	op_rrr(t_stacks *s)
 		return ;
 	rev_rotate(&s->a);
 	rev_rotate(&s->b);
+	s->ops[10]++;
 	write(1, "rrr\n", 4);
 }
 

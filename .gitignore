@@ -1,0 +1,24 @@
+# Binários
+push_swap
+checker
+a.out
+checker_linux
+checker_Mac
+fedora_checker
+
+# Ficheiros objeto
+*.o
+
+# Ficheiros de dependências
+*.d
+
+# Ficheiros temporários do editor
+*.swp
+*.swo
+*~
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store

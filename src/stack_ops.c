@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_ops.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joaog <joaog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: joagomes <joagomes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 17:15:44 by joaog             #+#    #+#             */
-/*   Updated: 2026/06/03 17:33:00 by joaog            ###   ########.fr       */
+/*   Updated: 2026/06/09 15:20:34 by joagomes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	peek_top(t_node *stack)
 {
@@ -33,6 +33,17 @@ int	stack_size(t_node *stack)
 	}
 	return (node_size);
 }
+
+int	ft_sqrt(int n)
+{
+	int	i;
+
+	i = 1;
+	while (i * i <= n)
+		i++;
+	return (i - 1);
+}
+
 /*
 criar uma main.c para testar os nós
 

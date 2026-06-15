@@ -1,27 +1,45 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I include -I libft
 
-SRC = src/main.c \
+LIBFT = libft/libft.a
+
+SRC = main.c \
       src/operations.c \
       src/operations2.c \
       src/operations3.c \
       src/stack_ops.c \
-      src/stack_utils.c
+      src/stack_utils.c \
+      src/stack_moves.c \
+      src/parsing.c \
+      src/validation.c \
+      src/sort_simple.c \
+      src/disorder.c \
+      src/sort_medium.c \
+      src/index.c \
+      src/sort_complex.c \
+      src/sort_adaptive.c \
+      src/get_strategy.c \
+	  src/bench.c \
+	  src/bench_ops.c
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(LIBFT):
+	make -C libft
+
+$(NAME): $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
+	make -C libft fclean
 
 re: fclean all
 
